@@ -20,6 +20,16 @@
 </head>
 
 <body>
+<audio id="weddingMusic" loop>
+  <source src="assets/audio/wedding-music.mp3" type="audio/mpeg">
+</audio>
+
+<!-- MUSIC TOGGLE -->
+
+<!-- MUSIC TOGGLE -->
+<button class="music-toggle" id="musicToggle" type="button" aria-label="Play wedding music" hidden>
+  <span class="music-toggle__icon">♫</span>
+</button>
 
   <!-- Wedding Invitation -->
   <main class="invitation">
@@ -454,47 +464,267 @@
 
     <div class="wedding-programme__timeline">
 
-      <div class="wedding-programme__item">
-        <span class="wedding-programme__time">1:00 PM</span>
-        <span class="wedding-programme__dot"></span>
-        <div class="wedding-programme__event">
-          <h3>Wedding Ceremony</h3>
-          <p>Join us as we exchange our vows.</p>
+     
+<div class="wedding-programme__item">
+  <span class="wedding-programme__time">1:00 PM</span>
+  <span class="wedding-programme__dot"></span>
+  <div class="wedding-programme__event">
+    <h3>Wedding Ceremony</h3>
+    <p>Join us as we exchange our vows.</p>
+  </div>
+</div>
+
+<div class="wedding-programme__item">
+  <span class="wedding-programme__time">3:00 PM</span>
+  <span class="wedding-programme__dot"></span>
+  <div class="wedding-programme__event">
+    <h3>Part 1 Programme</h3>
+    <p>Let the reception celebration begin.</p>
+  </div>
+</div>
+
+<div class="wedding-programme__item">
+  <span class="wedding-programme__time">5:00 PM</span>
+  <span class="wedding-programme__dot"></span>
+  <div class="wedding-programme__event">
+    <h3>Dinner</h3>
+    <p>An evening of good food and togetherness.</p>
+  </div>
+</div>
+
+<div class="wedding-programme__item">
+  <span class="wedding-programme__time">6:00 PM</span>
+  <span class="wedding-programme__dot"></span>
+  <div class="wedding-programme__event">
+    <h3>Part 2 Programme</h3>
+    <p>Special moments, messages, and celebration.</p>
+  </div>
+</div>
+
+<div class="wedding-programme__item">
+  <span class="wedding-programme__time">7:00 PM</span>
+  <span class="wedding-programme__dot"></span>
+  <div class="wedding-programme__event">
+    <h3>Send-Off</h3>
+    <p>Send the newlyweds off with love.</p>
+  </div>
+</div>
+
+
         </div>
+
+    <!-- FULL PROGRAMME BUTTON -->
+
+    <button class="wedding-programme__button"
+            id="openFullProgramme"
+            type="button">
+      VIEW FULL RECEPTION PROGRAMME
+      <span>＋</span>
+    </button>
+
+  </div>
+
+</section>
+
+<!-- ========================================
+     FULL RECEPTION PROGRAMME MODAL
+======================================== -->
+
+<div class="programme-modal" id="fullProgrammeModal">
+
+  <div class="programme-modal__overlay"></div>
+
+  <div class="programme-modal__container">
+
+    <!-- CLOSE BUTTON -->
+
+    <button class="programme-modal__close"
+            id="closeFullProgramme"
+            type="button"
+            aria-label="Close programme">
+      &times;
+    </button>
+
+    <!-- HEADER -->
+
+    <div class="programme-modal__header">
+
+      <p class="programme-modal__eyebrow">
+        THE CELEBRATION
+      </p>
+
+      <h2 class="programme-modal__title">
+        Reception <span>Programme</span>
+      </h2>
+
+      <p class="programme-modal__subtitle">
+      DINNER FLOW
+      </p>
+
+      <div class="ornament-divider">
+        <img src="assets/images/divider-flourish.svg"
+             class="ornament-divider__image"
+             alt="">
       </div>
 
-      <div class="wedding-programme__item">
-        <span class="wedding-programme__time">3:00 PM</span>
-        <span class="wedding-programme__dot"></span>
-        <div class="wedding-programme__event">
-          <h3>Wedding Reception</h3>
-          <p>Let the celebration begin.</p>
-        </div>
+      <p class="programme-modal__note">
+        This programme is flexible.
+      </p>
+
+    </div>
+
+    <!-- PART 1 -->
+
+    <h3 class="programme-modal__part">
+      PART 1
+    </h3>
+
+    <div class="programme-modal__table">
+
+      <div class="programme-modal__row programme-modal__row--header">
+        <span>ACTIVITIES / PROGRAM</span>
+        <span>FACILITATED BY</span>
       </div>
 
-      <div class="wedding-programme__item">
-        <span class="wedding-programme__time">6:00 PM</span>
-        <span class="wedding-programme__dot"></span>
-        <div class="wedding-programme__event">
-          <h3>Dinner</h3>
-          <p>An evening of good food and togetherness.</p>
-        </div>
+      <div class="programme-modal__row">
+        <span>Guest Arrival & Socialization</span>
+        <span>—</span>
       </div>
 
-      <div class="wedding-programme__item">
-        <span class="wedding-programme__time">7:00 PM</span>
-        <span class="wedding-programme__dot"></span>
-        <div class="wedding-programme__event">
-          <h3>Send-Off</h3>
-          <p>Send the newlyweds off with love.</p>
-        </div>
+      <div class="programme-modal__row">
+        <span>Call to Order / Entourage Line-Up</span>
+        <span>Coordinator</span>
       </div>
+
+      <div class="programme-modal__row">
+        <span>Grand Entrance of Parents, Principal Sponsors, Bride Squad & Groom Squad</span>
+        <span>Coordinator</span>
+      </div>
+
+      <div class="programme-modal__row">
+        <span>Couple's Grand Entrance – Upbeat Music</span>
+        <span>Couple</span>
+      </div>
+
+      <div class="programme-modal__row">
+        <span>Mini Interview with Emcee</span>
+        <span>Host</span>
+      </div>
+
+      <div class="programme-modal__row">
+        <span>First Dance – Love Songs</span>
+        <span>Couple</span>
+      </div>
+
+      <div class="programme-modal__row">
+        <span>Money Dance</span>
+        <span>Couple</span>
+      </div>
+
+      <div class="programme-modal__row">
+        <span>Slicing of Cake</span>
+        <span>Couple</span>
+      </div>
+
+      <div class="programme-modal__row">
+        <span>Wine Toasting</span>
+        <span>Lead by Bestman</span>
+      </div>
+
+      <div class="programme-modal__row">
+        <span>Prayer for the Food</span>
+        <span>—</span>
+      </div>
+
+      <div class="programme-modal__row">
+        <span>Photo Opportunity with the Couple</span>
+        <span>Photographer</span>
+      </div>
+
+      <div class="programme-modal__row">
+        <span>Dinner</span>
+        <span>—</span>
+      </div>
+
+    </div>
+
+    <!-- PART 2 -->
+
+    <h3 class="programme-modal__part">
+      PART 2
+    </h3>
+
+    <div class="programme-modal__table">
+
+      <div class="programme-modal__row programme-modal__row--header">
+        <span>ACTIVITIES / PROGRAM</span>
+        <span>FACILITATED BY</span>
+      </div>
+
+      <div class="programme-modal__row">
+        <span>Parents' Messages</span>
+        <span>—</span>
+      </div>
+
+      <div class="programme-modal__row">
+        <span>Games – Garter & Bouquet Choosing</span>
+        <span>—</span>
+      </div>
+
+      <div class="programme-modal__row">
+        <span>Removing of Garter</span>
+        <span>—</span>
+      </div>
+
+      <div class="programme-modal__row">
+        <span>Guest / Sponsors' Message</span>
+        <span>—</span>
+      </div>
+
+      <div class="programme-modal__row">
+        <span>Wow for Each Other (Optional)</span>
+        <span>—</span>
+      </div>
+
+      <div class="programme-modal__row">
+        <span>Opening of Gifts</span>
+        <span>—</span>
+      </div>
+
+      <div class="programme-modal__row">
+        <span>AVP – Same Day Edit (SDE)</span>
+        <span>—</span>
+      </div>
+
+      <div class="programme-modal__row">
+        <span>Newlywed Thank You Message</span>
+        <span>—</span>
+      </div>
+
+      <div class="programme-modal__row">
+        <span>Host Thank You Message</span>
+        <span>—</span>
+      </div>
+
+    </div>
+
+    <!-- FOOTER -->
+
+    <div class="programme-modal__footer">
+
+      <div class="ornament-divider">
+        <img src="assets/images/divider-flourish.svg"
+             class="ornament-divider__image"
+             alt="">
+      </div>
+
+      <p>Thank you for celebrating with us!</p>
 
     </div>
 
   </div>
 
-</section>
+</div>
 
 <!-- ========================================
      GIFT SECTION
@@ -659,17 +889,24 @@
 </div>
 
 
+
+
+
 <!-- RSVP SECTION -->
 <section class="rsvp" id="rsvp">
+
   <div class="rsvp__content">
 
     <!-- DECORATIVE CORNERS -->
     <img src="assets/images/corner-flourish.svg"
          class="rsvp__corner rsvp__corner--tl" alt="">
+
     <img src="assets/images/corner-flourish.svg"
          class="rsvp__corner rsvp__corner--tr" alt="">
+
     <img src="assets/images/corner-flourish.svg"
          class="rsvp__corner rsvp__corner--bl" alt="">
+
     <img src="assets/images/corner-flourish.svg"
          class="rsvp__corner rsvp__corner--br" alt="">
 
@@ -701,11 +938,11 @@
                placeholder="Your email address" required>
       </div>
 
-<div class="rsvp__field">
-  <label for="guestPhone">Phone Number (Optional)</label>
-  <input type="tel" id="guestPhone" name="guestPhone"
-         placeholder="Your phone number">
-</div>
+      <div class="rsvp__field">
+        <label for="guestPhone">Phone Number (Optional)</label>
+        <input type="tel" id="guestPhone" name="guestPhone"
+               placeholder="Your phone number">
+      </div>
 
       <div class="rsvp__field">
         <label for="attendance">Will you be attending?</label>
@@ -716,32 +953,270 @@
         </select>
       </div>
 
-      <div class="rsvp__field">
-        <label for="guestCount">Number of Guests</label>
-        <select id="guestCount" name="guestCount" required>
-          <option value="1">1 Guest</option>
-          <option value="2">2 Guests</option>
-          <option value="3">3 Guests</option>
-          <option value="4">4 Guests</option>
-        </select>
-      </div>
+      <div class="rsvp__field" id="guestCountField">
+  <label for="guestCount">Number of Guests</label>
+  <select id="guestCount" name="guestCount" required>
+    <option value="1" selected>1 Guest</option>
+  </select>
+</div>
 
       <div class="rsvp__field">
-        <label for="guestMessage">Message for the Couple (Optional)</label>
+        <label for="guestMessage">Additional Information (Optional)</label>
         <textarea id="guestMessage" name="guestMessage"
                   placeholder="Leave a message..."
                   rows="4"></textarea>
       </div>
-
+<div class="cf-turnstile" data-sitekey="0x4AAAAAAGAvQYjhDcMg10CH"></div>
       <button type="submit" class="rsvp__submit">
         SEND RSVP
       </button>
 
     </form>
 
+   <!-- RSVP CONFIRMATION MODAL -->
+<div class="rsvp-modal" id="rsvpModal" hidden>
+
+  <div class="rsvp-modal__overlay"></div>
+
+  <div class="rsvp-modal__card" role="dialog" aria-modal="true">
+
+    <!-- DECORATIVE CORNERS -->
+    <img src="assets/images/corner-flourish.svg"
+         class="rsvp-modal__corner rsvp-modal__corner--tl" alt="">
+
+    <img src="assets/images/corner-flourish.svg"
+         class="rsvp-modal__corner rsvp-modal__corner--tr" alt="">
+
+    <img src="assets/images/corner-flourish.svg"
+         class="rsvp-modal__corner rsvp-modal__corner--bl" alt="">
+
+    <img src="assets/images/corner-flourish.svg"
+         class="rsvp-modal__corner rsvp-modal__corner--br" alt="">
+
+    <div class="rsvp-modal__content">
+
+      <div class="rsvp-modal__ornament">
+        <img src="assets/images/divider-flourish.svg" alt="">
+      </div>
+
+      <p class="rsvp-modal__eyebrow">WITH LOVE & GRATITUDE</p>
+
+      <h3 class="rsvp-modal__title" id="rsvpModalTitle">
+        Thank You!
+      </h3>
+
+      <p class="rsvp-modal__message" id="rsvpModalMessage">
+        Your response has been received.
+      </p>
+
+      <p class="rsvp-modal__message">
+        We look forward to celebrating with you.
+      </p>
+
+      <div class="rsvp-modal__ornament">
+        <img src="assets/images/divider-flourish.svg" alt="">
+      </div>
+
+      <p class="rsvp-modal__signature">
+        Joseph & Antonette
+      </p>
+
+      <button type="button" class="rsvp-modal__close" id="closeRsvpModal">
+        CLOSE
+      </button>
+
+    </div>
+
+  </div>
+
+</div>
+
+</section>
+
+
+<!-- Guestbook Section -->
+<section class="guestbook" id="guestbook">
+  <div class="guestbook__container">
+
+<img
+  src="assets/images/corner-flourish.svg"
+  class="rsvp__corner rsvp__corner--tl"
+  alt=""
+>
+
+<img
+  src="assets/images/corner-flourish.svg"
+  class="rsvp__corner rsvp__corner--tr"
+  alt=""
+>
+
+<img
+  src="assets/images/corner-flourish.svg"
+  class="rsvp__corner rsvp__corner--bl"
+  alt=""
+>
+
+<img
+  src="assets/images/corner-flourish.svg"
+  class="rsvp__corner rsvp__corner--br"
+  alt=""
+>
+
+    <span class="guestbook__eyebrow">A NOTE FOR THE COUPLE</span>
+
+    <h2 class="guestbook__title">
+      Leave a Message
+    </h2>
+
+    <p class="guestbook__description">
+      Share a heartfelt message, a wish, or a little
+      love for Joseph & Antonette.
+    </p>
+
+    <form class="guestbook__form" id="guestbookForm">
+
+      <div class="guestbook__field">
+        <label for="guestbookName">Your Name</label>
+        <input
+          type="text"
+          id="guestbookName"
+          name="guest_name"
+          placeholder="Enter your name"
+          maxlength="100"
+          required
+        >
+      </div>
+
+      <div class="guestbook__field">
+        <label for="guestbookMessage">Your Message</label>
+        <textarea
+          id="guestbookMessage"
+          name="message"
+          placeholder="Write something heartfelt..."
+          rows="5"
+          maxlength="1000"
+          required
+        ></textarea>
+      </div>
+
+      <button type="submit" class="guestbook__submit">
+        Send Your Wishes
+      </button>
+
+    </form>
+
+   
+<!-- GUESTBOOK CONFIRMATION MODAL -->
+<div class="guestbook-modal" id="guestbookModal" hidden>
+
+  <div class="guestbook-modal__overlay"></div>
+
+  <div class="guestbook-modal__card"
+       role="dialog"
+       aria-modal="true"
+       aria-labelledby="guestbookModalTitle">
+
+    <!-- DECORATIVE CORNERS -->
+    <img src="assets/images/corner-flourish.svg"
+         class="guestbook-modal__corner guestbook-modal__corner--tl" alt="">
+
+    <img src="assets/images/corner-flourish.svg"
+         class="guestbook-modal__corner guestbook-modal__corner--tr" alt="">
+
+    <img src="assets/images/corner-flourish.svg"
+         class="guestbook-modal__corner guestbook-modal__corner--bl" alt="">
+
+    <img src="assets/images/corner-flourish.svg"
+         class="guestbook-modal__corner guestbook-modal__corner--br" alt="">
+
+    <div class="guestbook-modal__content">
+
+      <div class="guestbook-modal__ornament">
+        <img src="assets/images/divider-flourish.svg" alt="">
+      </div>
+
+      <p class="guestbook-modal__eyebrow">
+        WITH LOVE & GRATITUDE
+      </p>
+
+      <h3 class="guestbook-modal__title" id="guestbookModalTitle">
+        Thank You!
+      </h3>
+
+      <p class="guestbook-modal__message">
+        Your heartfelt wishes have been received.
+      </p>
+
+      <p class="guestbook-modal__message">
+        Thank you for sharing your love with us.
+      </p>
+
+      <div class="guestbook-modal__ornament">
+        <img src="assets/images/divider-flourish.svg" alt="">
+      </div>
+
+      <p class="guestbook-modal__signature">
+        Joseph & Antonette
+      </p>
+
+      <button type="button"
+              class="guestbook-modal__close"
+              id="closeGuestbookModal">
+        CLOSE
+      </button>
+
+    </div>
+
+  </div>
+
+</div>
+
+
   </div>
 </section>
 
+<!-- Wedding Wishes Section -->
+<section class="wishes" id="wishes">
+
+  <div class="wishes__container">
+ <!-- Corner Flourishes -->
+    <img src="assets/images/corner-flourish.svg"
+         class="rsvp__corner rsvp__corner--tl" alt="">
+
+    <img src="assets/images/corner-flourish.svg"
+         class="rsvp__corner rsvp__corner--tr" alt="">
+
+    <img src="assets/images/corner-flourish.svg"
+         class="rsvp__corner rsvp__corner--bl" alt="">
+
+    <img src="assets/images/corner-flourish.svg"
+         class="rsvp__corner rsvp__corner--br" alt="">
+    <div class="wishes__heading">
+      <span class="wishes__eyebrow">WORDS OF LOVE</span>
+
+      <h2 class="wishes__title">
+        Wedding Wishes
+      </h2>
+ <div class="ornament-divider">
+  <img
+    src="assets/images/divider-flourish.svg"
+    alt=""
+    class="ornament-divider__image"
+  >
+</div>
+      <p class="wishes__description">
+        Heartfelt messages from the people who mean
+        the most to us.
+      </p>
+    </div>
+
+    <div class="wishes__messages" id="guestbookMessages">
+      <!-- Approved messages will appear here -->
+    </div>
+
+  </div>
+
+</section>
 
 <!-- CLOSING SECTION -->
 <section class="closing" id="closing">
@@ -796,6 +1271,6 @@
 
   <!-- JavaScript -->
   <script src="js/script.js"></script>
-
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 </body>
 </html>
