@@ -112,7 +112,7 @@ const nextPhoto = document.getElementById("nextPhoto");
 // Gallery images
 const galleryPhotos = Array.from(
   { length: 12 },
-  (_, index) => `assets/images/prenup-${index + 1}.png`
+  (_, index) => `assets/images/prenup-${index + 1}.webp`
 );
 
 let currentPhoto = 0;
