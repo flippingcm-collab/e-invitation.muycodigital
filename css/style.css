@@ -993,8 +993,12 @@ height: auto;
   background: var(--burgundy);
 }
 
-.dress-colors__swatch--white {
-  background: #FFFFFF;
+.dress-colors__swatch--beige {
+  background: #D8C3A5;
+}
+
+.dress-colors__swatch--cream {
+  background: #F5EBDD;
 }
 
 .dress-colors__swatch--gold {
